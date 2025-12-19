@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>kr.ac.korea</groupId>
-    <artifactId>20252R0136COSE40500</artifactId>
+    <artifactId>spring-boot-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>20252R0136COSE40500</name>
-    <description>20252R0136COSE40500</description>
+    <name>spring-boot-demo</name>
+    <description>Demo project for Spring Boot showcasing various HTTP methods using RestClient</description>
     <url/>
     <licenses>
         <license/>

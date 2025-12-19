@@ -1,4 +1,4 @@
-package kr.ac.korea._0252r0136cose40500;
+package kr.ac.korea.demo.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

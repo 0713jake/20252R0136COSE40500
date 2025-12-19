@@ -1,4 +1,4 @@
-package kr.ac.korea._0252r0136cose40500;
+package kr.ac.korea.demo.controller;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -13,7 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
 
 @RestController
+@RequestMapping("/demo")
 public class DemoController {
+
+    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/posts";
+    private static final String ITEM_URL = BASE_URL + "/1";
 
     private final RestClient restClient;
 
@@ -21,80 +25,80 @@ public class DemoController {
         this.restClient = restClientBuilder.build();
     }
 
-    @GetMapping("/demo/external")
+    @GetMapping("/external")
     public String getExternalData() {
         return restClient.get()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .body(String.class);
     }
 
-    @PostMapping("/demo/external-post")
+    @PostMapping("/external-post")
     public String postExternalData() {
         return restClient.post()
-                .uri("https://jsonplaceholder.typicode.com/posts")
+                .uri(BASE_URL)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
                 .retrieve()
                 .body(String.class);
     }
 
-    @PutMapping("/demo/external-put")
+    @PutMapping("/external-put")
     public String putExternalData() {
         return restClient.put()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"id\": 1, \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
                 .retrieve()
                 .body(String.class);
     }
 
-    @PatchMapping("/demo/external-patch")
+    @PatchMapping("/external-patch")
     public String patchExternalData() {
         return restClient.patch()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"title\": \"foo-patched\"}")
                 .retrieve()
                 .body(String.class);
     }
 
-    @DeleteMapping("/demo/external-delete")
+    @DeleteMapping("/external-delete")
     public String deleteExternalData() {
         return restClient.delete()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .body(String.class);
     }
 
-    @RequestMapping(value = "/demo/external-head", method = RequestMethod.HEAD)
+    @RequestMapping(value = "/external-head", method = RequestMethod.HEAD)
     public void headExternalData() {
         restClient.head()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .toBodilessEntity();
     }
 
-    @RequestMapping(value = "/demo/external-connect")
+    @GetMapping("/external-connect")
     public void connectExternalData() {
         restClient.options()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .toBodilessEntity();
     }
 
-    @RequestMapping(value = "/demo/external-options", method = RequestMethod.OPTIONS)
+    @RequestMapping(value = "/external-options", method = RequestMethod.OPTIONS)
     public void optionsExternalData() {
         restClient.options()
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .toBodilessEntity();
     }
 
-    @RequestMapping(value = "/demo/external-trace", method = RequestMethod.TRACE)
+    @RequestMapping(value = "/external-trace", method = RequestMethod.TRACE)
     public void traceExternalData() {
         restClient.method(HttpMethod.TRACE)
-                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .uri(ITEM_URL)
                 .retrieve()
                 .toBodilessEntity();
     }

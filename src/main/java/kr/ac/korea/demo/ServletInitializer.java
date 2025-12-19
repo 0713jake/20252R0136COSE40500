@@ -1,4 +1,4 @@
-package kr.ac.korea._0252r0136cose40500;
+package kr.ac.korea.demo;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
