@@ -3,6 +3,7 @@ package kr.ac.korea._0252r0136cose40500;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
 
@@ -29,6 +30,16 @@ public class DemoController {
                 .uri("https://jsonplaceholder.typicode.com/posts")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
+                .retrieve()
+                .body(String.class);
+    }
+
+    @PutMapping("/demo/external-put")
+    public String putExternalData() {
+        return restClient.put()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .body("{\"id\": 1, \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
                 .retrieve()
                 .body(String.class);
     }
