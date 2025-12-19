@@ -1,0 +1,1301 @@
+
+        at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUni
+tPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBo
+oter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:1
+62) ~[surefire-booter-3.5.4.jar:3.5.4]
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+~[surefire-booter-3.5.4.jar:3.5.4]
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+ ~[surefire-booter-3.5.4.jar:3.5.4]
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'welcomePageHandlerMapping' defined in class path
+ resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguratio
+n$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'welcomePageHandlerMapping' parameter 1: Error creating bean with name 'mv
+cConversionService' defined in class path resource [org/springframework/boot/we
+bmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Fa
+iled to instantiate [org.springframework.format.support.FormattingConversionSer
+vice]: Factory method 'mvcConversionService' threw exception with message: Erro
+r creating bean with name 'jsonSchemaConverter' defined in class path resource
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' para
+meter 1: Error creating bean with name 'associationLinks' defined in class path
+ resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigu
+ration.class]: Unsatisfied dependency expressed through method 'associationLink
+s' parameter 0: Error creating bean with name 'resourceMappings' defined in cla
+ss path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvc
+Configuration.class]: Failed to instantiate [org.springframework.data.rest.core
+.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw e
+xception with message: Error creating bean with name 'jdbcMappingContext' defin
+ed in class path resource [org/springframework/boot/data/jdbc/autoconfigure/Dat
+aJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisf
+ied dependency expressed through method 'jdbcMappingContext' parameter 1: Error
+ creating bean with name 'jdbcCustomConversions' defined in class path resource
+ [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConf
+iguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.spring
+framework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCu
+stomConversions' threw exception with message: Error creating bean with name 'j
+dbcDialect' defined in class path resource [org/springframework/boot/data/jdbc/
+autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration
+.class]: Unsatisfied dependency expressed through method 'jdbcDialect' paramete
+r 0: Error creating bean with name 'namedParameterJdbcTemplate' defined in clas
+s path resource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbc
+TemplateConfiguration.class]: Failed to initialize dependency 'dataSourceScript
+DatabaseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTe
+mplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' de
+fined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataS
+ourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed t
+hrough method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating
+ bean with name 'dataSource' defined in class path resource [org/springframewor
+k/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to inst
+antiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw
+ exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.boot.test.context.SpringBootContextLoader.loadContext
+(SpringBootContextLoader.java:156) ~[spring-boot-test-4.0.1.jar:4.0.1]
+        at org.springframework.boot.test.context.SpringBootContextLoader.loadContext
+(SpringBootContextLoader.java:115) ~[spring-boot-test-4.0.1.jar:4.0.1]
+        at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDele
+gate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247) ~[spr
+ing-test-7.0.2.jar:7.0.2]
+        at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDele
+gate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167) ~[sp
+ring-test-7.0.2.jar:7.0.2]
+        ... 86 common frames omitted
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'mvcConversionService' defined in class path resource [org
+/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvc
+Configuration.class]: Failed to instantiate [org.springframework.format.support
+.FormattingConversionService]: Factory method 'mvcConversionService' threw exce
+ption with message: Error creating bean with name 'jsonSchemaConverter' defined
+ in class path resource [org/springframework/data/rest/webmvc/config/Repository
+RestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'j
+sonSchemaConverter' parameter 1: Error creating bean with name 'associationLink
+s' defined in class path resource [org/springframework/data/rest/webmvc/config/
+RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through
+ method 'associationLinks' parameter 0: Error creating bean with name 'resource
+Mappings' defined in class path resource [org/springframework/data/rest/webmvc/
+config/RepositoryRestMvcConfiguration.class]: Failed to instantiate [org.spring
+framework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'r
+esourceMappings' threw exception with message: Error creating bean with name 'j
+dbcMappingContext' defined in class path resource [org/springframework/boot/dat
+a/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfig
+uration.class]: Unsatisfied dependency expressed through method 'jdbcMappingCon
+text' parameter 1: Error creating bean with name 'jdbcCustomConversions' define
+d in class path resource [org/springframework/boot/data/jdbc/autoconfigure/Data
+JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to
+ instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]
+: Factory method 'jdbcCustomConversions' threw exception with message: Error cr
+eating bean with name 'jdbcDialect' defined in class path resource [org/springf
+ramework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$Spr
+ingBootJdbcConfiguration.class]: Unsatisfied dependency expressed through metho
+d 'jdbcDialect' parameter 0: Error creating bean with name 'namedParameterJdbcT
+emplate' defined in class path resource [org/springframework/boot/jdbc/autoconf
+igure/NamedParameterJdbcTemplateConfiguration.class]: Failed to initialize depe
+ndency 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOperations be
+an 'namedParameterJdbcTemplate': Error creating bean with name 'dataSourceScrip
+tDatabaseInitializer' defined in class path resource [org/springframework/boot/
+jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfie
+d dependency expressed through method 'dataSourceScriptDatabaseInitializer' par
+ameter 0: Error creating bean with name 'dataSource' defined in class path reso
+urce [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikar
+i.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory m
+ethod 'dataSource' threw exception with message: Failed to determine a suitable
+ driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 112 common frames omitted
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.format.support.FormattingConversionService]: Fac
+tory method 'mvcConversionService' threw exception with message: Error creating
+ bean with name 'jsonSchemaConverter' defined in class path resource [org/sprin
+gframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsat
+isfied dependency expressed through method 'jsonSchemaConverter' parameter 1: E
+rror creating bean with name 'associationLinks' defined in class path resource
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'associationLinks' paramet
+er 0: Error creating bean with name 'resourceMappings' defined in class path re
+source [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigurat
+ion.class]: Failed to instantiate [org.springframework.data.rest.core.mapping.R
+epositoryResourceMappings]: Factory method 'resourceMappings' threw exception w
+ith message: Error creating bean with name 'jdbcMappingContext' defined in clas
+s path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepos
+itoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depend
+ency expressed through method 'jdbcMappingContext' parameter 1: Error creating
+bean with name 'jdbcCustomConversions' defined in class path resource [org/spri
+ngframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$
+SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.
+data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConver
+sions' threw exception with message: Error creating bean with name 'jdbcDialect
+' defined in class path resource [org/springframework/boot/data/jdbc/autoconfig
+ure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: U
+nsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error
+ creating bean with name 'namedParameterJdbcTemplate' defined in class path res
+ource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateCo
+nfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseIn
+itializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': E
+rror creating bean with name 'dataSourceScriptDatabaseInitializer' defined in c
+lass path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceIniti
+alizationAutoConfiguration.class]: Unsatisfied dependency expressed through met
+hod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with
+ name 'dataSource' defined in class path resource [org/springframework/boot/jdb
+c/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [c
+om.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception
+ with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7
+.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 126 common frames omitted
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jsonSchemaConverter' defined in class path resou
+rce [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration
+.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter'
+parameter 1: Error creating bean with name 'associationLinks' defined in class
+path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcCon
+figuration.class]: Unsatisfied dependency expressed through method 'association
+Links' parameter 0: Error creating bean with name 'resourceMappings' defined in
+ class path resource [org/springframework/data/rest/webmvc/config/RepositoryRes
+tMvcConfiguration.class]: Failed to instantiate [org.springframework.data.rest.
+core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' thr
+ew exception with message: Error creating bean with name 'jdbcMappingContext' d
+efined in class path resource [org/springframework/boot/data/jdbc/autoconfigure
+/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsa
+tisfied dependency expressed through method 'jdbcMappingContext' parameter 1: E
+rror creating bean with name 'jdbcCustomConversions' defined in class path reso
+urce [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAuto
+Configuration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.sp
+ringframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jd
+bcCustomConversions' threw exception with message: Error creating bean with nam
+e 'jdbcDialect' defined in class path resource [org/springframework/boot/data/j
+dbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfigura
+tion.class]: Unsatisfied dependency expressed through method 'jdbcDialect' para
+meter 0: Error creating bean with name 'namedParameterJdbcTemplate' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/NamedParameter
+JdbcTemplateConfiguration.class]: Failed to initialize dependency 'dataSourceSc
+riptDatabaseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJd
+bcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer
+' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/D
+ataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency express
+ed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error crea
+ting bean with name 'dataSource' defined in class path resource [org/springfram
+ework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to
+instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' t
+hrew exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration$Ena
+bleWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:570) ~
+[spring-boot-webmvc-4.0.1.jar:4.0.1]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMe
+thodHandleAccessor.java:104) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        ... 129 common frames omitted
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'associationLinks' defined in class path resource
+ [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cl
+ass]: Unsatisfied dependency expressed through method 'associationLinks' parame
+ter 0: Error creating bean with name 'resourceMappings' defined in class path r
+esource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigura
+tion.class]: Failed to instantiate [org.springframework.data.rest.core.mapping.
+RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception
+with message: Error creating bean with name 'jdbcMappingContext' defined in cla
+ss path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepo
+sitoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depen
+dency expressed through method 'jdbcMappingContext' parameter 1: Error creating
+ bean with name 'jdbcCustomConversions' defined in class path resource [org/spr
+ingframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration
+$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework
+.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConve
+rsions' threw exception with message: Error creating bean with name 'jdbcDialec
+t' defined in class path resource [org/springframework/boot/data/jdbc/autoconfi
+gure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]:
+Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Erro
+r creating bean with name 'namedParameterJdbcTemplate' defined in class path re
+source [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateC
+onfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseI
+nitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate':
+Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInit
+ializationAutoConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean wit
+h name 'dataSource' defined in class path resource [org/springframework/boot/jd
+bc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [
+com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exceptio
+n with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 151 common frames omitted
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'resourceMappings' defined in class path resource [org/spr
+ingframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Fai
+led to instantiate [org.springframework.data.rest.core.mapping.RepositoryResour
+ceMappings]: Factory method 'resourceMappings' threw exception with message: Er
+ror creating bean with name 'jdbcMappingContext' defined in class path resource
+ [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConf
+iguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed
+through method 'jdbcMappingContext' parameter 1: Error creating bean with name
+'jdbcCustomConversions' defined in class path resource [org/springframework/boo
+t/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcC
+onfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.
+convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw ex
+ception with message: Error creating bean with name 'jdbcDialect' defined in cl
+ass path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRep
+ositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depe
+ndency expressed through method 'jdbcDialect' parameter 0: Error creating bean
+with name 'namedParameterJdbcTemplate' defined in class path resource [org/spri
+ngframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.cla
+ss]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of N
+amedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating b
+ean with name 'dataSourceScriptDatabaseInitializer' defined in class path resou
+rce [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoCo
+nfiguration.class]: Unsatisfied dependency expressed through method 'dataSource
+ScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSour
+ce' defined in class path resource [org/springframework/boot/jdbc/autoconfigure
+/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikar
+i.HikariDataSource]: Factory method 'dataSource' threw exception with message:
+Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 165 common frames omitted
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMapping
+s]: Factory method 'resourceMappings' threw exception with message: Error creat
+ing bean with name 'jdbcMappingContext' defined in class path resource [org/spr
+ingframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration
+$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through m
+ethod 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCust
+omConversions' defined in class path resource [org/springframework/boot/data/jd
+bc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfigurat
+ion.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.J
+dbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception w
+ith message: Error creating bean with name 'jdbcDialect' defined in class path
+resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositories
+AutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency ex
+pressed through method 'jdbcDialect' parameter 0: Error creating bean with name
+ 'namedParameterJdbcTemplate' defined in class path resource [org/springframewo
+rk/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.class]: Fail
+ed to initialize dependency 'dataSourceScriptDatabaseInitializer' of NamedParam
+eterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating bean with
+name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/
+springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfigurati
+on.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDat
+abaseInitializer' parameter 0: Error creating bean with name 'dataSource' defin
+ed in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSour
+ceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariD
+ataSource]: Factory method 'dataSource' threw exception with message: Failed to
+ determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7
+.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 179 common frames omitted
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jdbcMappingContext' defined in class path resour
+ce [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoCo
+nfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expresse
+d through method 'jdbcMappingContext' parameter 1: Error creating bean with nam
+e 'jdbcCustomConversions' defined in class path resource [org/springframework/b
+oot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdb
+cConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.cor
+e.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw
+exception with message: Error creating bean with name 'jdbcDialect' defined in
+class path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcR
+epositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied de
+pendency expressed through method 'jdbcDialect' parameter 0: Error creating bea
+n with name 'namedParameterJdbcTemplate' defined in class path resource [org/sp
+ringframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.c
+lass]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of
+ NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating
+ bean with name 'dataSourceScriptDatabaseInitializer' defined in class path res
+ource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAuto
+Configuration.class]: Unsatisfied dependency expressed through method 'dataSour
+ceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSo
+urce' defined in class path resource [org/springframework/boot/jdbc/autoconfigu
+re/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hik
+ari.HikariDataSource]: Factory method 'dataSource' threw exception with message
+: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
+n.resourceMappings(RepositoryRestMvcConfiguration.java:709) ~[spring-data-rest-
+webmvc-5.0.1.jar:5.0.1]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMe
+thodHandleAccessor.java:104) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        ... 182 common frames omitted
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'jdbcCustomConversions' defined in class path resource [or
+g/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfigur
+ation$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springfram
+ework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustom
+Conversions' threw exception with message: Error creating bean with name 'jdbcD
+ialect' defined in class path resource [org/springframework/boot/data/jdbc/auto
+configure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0:
+ Error creating bean with name 'namedParameterJdbcTemplate' defined in class pa
+th resource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemp
+lateConfiguration.class]: Failed to initialize dependency 'dataSourceScriptData
+baseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTempla
+te': Error creating bean with name 'dataSourceScriptDatabaseInitializer' define
+d in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourc
+eInitializationAutoConfiguration.class]: Unsatisfied dependency expressed throu
+gh method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bea
+n with name 'dataSource' defined in class path resource [org/springframework/bo
+ot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instanti
+ate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exc
+eption with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1762) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 208 common frames omitted
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: F
+actory method 'jdbcCustomConversions' threw exception with message: Error creat
+ing bean with name 'jdbcDialect' defined in class path resource [org/springfram
+ework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$Spring
+BootJdbcConfiguration.class]: Unsatisfied dependency expressed through method '
+jdbcDialect' parameter 0: Error creating bean with name 'namedParameterJdbcTemp
+late' defined in class path resource [org/springframework/boot/jdbc/autoconfigu
+re/NamedParameterJdbcTemplateConfiguration.class]: Failed to initialize depende
+ncy 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOperations bean
+'namedParameterJdbcTemplate': Error creating bean with name 'dataSourceScriptDa
+tabaseInitializer' defined in class path resource [org/springframework/boot/jdb
+c/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied d
+ependency expressed through method 'dataSourceScriptDatabaseInitializer' parame
+ter 0: Error creating bean with name 'dataSource' defined in class path resourc
+e [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.c
+lass]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory meth
+od 'dataSource' threw exception with message: Failed to determine a suitable dr
+iver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7
+.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 222 common frames omitted
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jdbcDialect' defined in class path resource [org
+/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfigura
+tion$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed throu
+gh method 'jdbcDialect' parameter 0: Error creating bean with name 'namedParame
+terJdbcTemplate' defined in class path resource [org/springframework/boot/jdbc/
+autoconfigure/NamedParameterJdbcTemplateConfiguration.class]: Failed to initial
+ize dependency 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOpera
+tions bean 'namedParameterJdbcTemplate': Error creating bean with name 'dataSou
+rceScriptDatabaseInitializer' defined in class path resource [org/springframewo
+rk/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Un
+satisfied dependency expressed through method 'dataSourceScriptDatabaseInitiali
+zer' parameter 0: Error creating bean with name 'dataSource' defined in class p
+ath resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfigurati
+on$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: F
+actory method 'dataSource' threw exception with message: Failed to determine a
+suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.boot.data.jdbc.autoconfigure.DataJdbcRepositoriesAuto
+Configuration$SpringBootJdbcConfiguration.jdbcCustomConversions(DataJdbcReposit
+oriesAutoConfiguration.java:126) ~[spring-boot-data-jdbc-4.0.1.jar:4.0.1]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMe
+thodHandleAccessor.java:104) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        ... 225 common frames omitted
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'namedParameterJdbcTemplate' defined in class path resourc
+e [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfig
+uration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitia
+lizer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error
+ creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class
+ path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializ
+ationAutoConfiguration.class]: Unsatisfied dependency expressed through method
+'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with nam
+e 'dataSource' defined in class path resource [org/springframework/boot/jdbc/au
+toconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.z
+axxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception wit
+h message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:322) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Abs
+tractBeanFactory.java:201) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.config.DependencyDescriptor.resolveCand
+idate(DependencyDescriptor.java:229) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1762) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 246 common frames omitted
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInit
+ializationAutoConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean wit
+h name 'dataSource' defined in class path resource [org/springframework/boot/jd
+bc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [
+com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exceptio
+n with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.ge
+tSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.
+2]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Abs
+tractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:309) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 252 common frames omitted
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'dataSource' defined in class path resource [org/springfra
+mework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to
+ instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource'
+threw exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.2.jar:7.0.2
+]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+ ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-b
+eans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.
+0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.2.jar:
+7.0.2]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.2.jar:7.
+0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 262 common frames omitted
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' thr
+ew exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.2.ja
+r:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7
+.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.2.jar:7.0.2]
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653) ~[spring-beans-7.0.2.jar:7.0.2]
+        ... 276 common frames omitted
+> Caused by: org.springframework.boot.jdbc.autoconfigure.DataSourceProperties$D
+ataSourceBeanCreationException: Failed to determine a suitable driver class
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.determin
+eDriverClassName(DataSourceProperties.java:179) ~[spring-boot-jdbc-4.0.1.jar:4.
+0.1]
+        at org.springframework.boot.jdbc.autoconfigure.PropertiesJdbcConnectionDetai
+ls.getDriverClassName(PropertiesJdbcConnectionDetails.java:51) ~[spring-boot-jd
+bc-4.0.1.jar:4.0.1]
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration.creat
+eDataSource(DataSourceConfiguration.java:63) ~[spring-boot-jdbc-4.0.1.jar:4.0.1
+]
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration$Hikar
+i.dataSource(DataSourceConfiguration.java:128) ~[spring-boot-jdbc-4.0.1.jar:4.0
+.1]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMe
+thodHandleAccessor.java:104) ~[na:na]
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.jav
+a:265)
+        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.ja
+va:632)
+        at java.base/java.util.Optional.orElseGet(Optional.java:364)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+        at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'welcomePageHandlerMapping' defined in class path
+ resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguratio
+n$EnableWebMvcConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'welcomePageHandlerMapping' parameter 1: Error creating bean with name 'mv
+cConversionService' defined in class path resource [org/springframework/boot/we
+bmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Fa
+iled to instantiate [org.springframework.format.support.FormattingConversionSer
+vice]: Factory method 'mvcConversionService' threw exception with message: Erro
+r creating bean with name 'jsonSchemaConverter' defined in class path resource
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'jsonSchemaConverter' para
+meter 1: Error creating bean with name 'associationLinks' defined in class path
+ resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigu
+ration.class]: Unsatisfied dependency expressed through method 'associationLink
+s' parameter 0: Error creating bean with name 'resourceMappings' defined in cla
+ss path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvc
+Configuration.class]: Failed to instantiate [org.springframework.data.rest.core
+.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' threw e
+xception with message: Error creating bean with name 'jdbcMappingContext' defin
+ed in class path resource [org/springframework/boot/data/jdbc/autoconfigure/Dat
+aJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisf
+ied dependency expressed through method 'jdbcMappingContext' parameter 1: Error
+ creating bean with name 'jdbcCustomConversions' defined in class path resource
+ [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConf
+iguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.spring
+framework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCu
+stomConversions' threw exception with message: Error creating bean with name 'j
+dbcDialect' defined in class path resource [org/springframework/boot/data/jdbc/
+autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration
+.class]: Unsatisfied dependency expressed through method 'jdbcDialect' paramete
+r 0: Error creating bean with name 'namedParameterJdbcTemplate' defined in clas
+s path resource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbc
+TemplateConfiguration.class]: Failed to initialize dependency 'dataSourceScript
+DatabaseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTe
+mplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' de
+fined in class path resource [org/springframework/boot/jdbc/autoconfigure/DataS
+ourceInitializationAutoConfiguration.class]: Unsatisfied dependency expressed t
+hrough method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating
+ bean with name 'dataSource' defined in class path resource [org/springframewor
+k/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to inst
+antiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw
+ exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.boot.test.context.SpringBootContextLoader.loadContext
+(SpringBootContextLoader.java:156)
+        at org.springframework.boot.test.context.SpringBootContextLoader.loadContext
+(SpringBootContextLoader.java:115)
+        at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDele
+gate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:247)
+        at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDele
+gate.lambda$loadContext$0(DefaultCacheAwareContextLoaderDelegate.java:167)
+        ... 21 more
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'mvcConversionService' defined in class path resource [org
+/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvc
+Configuration.class]: Failed to instantiate [org.springframework.format.support
+.FormattingConversionService]: Factory method 'mvcConversionService' threw exce
+ption with message: Error creating bean with name 'jsonSchemaConverter' defined
+ in class path resource [org/springframework/data/rest/webmvc/config/Repository
+RestMvcConfiguration.class]: Unsatisfied dependency expressed through method 'j
+sonSchemaConverter' parameter 1: Error creating bean with name 'associationLink
+s' defined in class path resource [org/springframework/data/rest/webmvc/config/
+RepositoryRestMvcConfiguration.class]: Unsatisfied dependency expressed through
+ method 'associationLinks' parameter 0: Error creating bean with name 'resource
+Mappings' defined in class path resource [org/springframework/data/rest/webmvc/
+config/RepositoryRestMvcConfiguration.class]: Failed to instantiate [org.spring
+framework.data.rest.core.mapping.RepositoryResourceMappings]: Factory method 'r
+esourceMappings' threw exception with message: Error creating bean with name 'j
+dbcMappingContext' defined in class path resource [org/springframework/boot/dat
+a/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfig
+uration.class]: Unsatisfied dependency expressed through method 'jdbcMappingCon
+text' parameter 1: Error creating bean with name 'jdbcCustomConversions' define
+d in class path resource [org/springframework/boot/data/jdbc/autoconfigure/Data
+JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to
+ instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]
+: Factory method 'jdbcCustomConversions' threw exception with message: Error cr
+eating bean with name 'jdbcDialect' defined in class path resource [org/springf
+ramework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$Spr
+ingBootJdbcConfiguration.class]: Unsatisfied dependency expressed through metho
+d 'jdbcDialect' parameter 0: Error creating bean with name 'namedParameterJdbcT
+emplate' defined in class path resource [org/springframework/boot/jdbc/autoconf
+igure/NamedParameterJdbcTemplateConfiguration.class]: Failed to initialize depe
+ndency 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOperations be
+an 'namedParameterJdbcTemplate': Error creating bean with name 'dataSourceScrip
+tDatabaseInitializer' defined in class path resource [org/springframework/boot/
+jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfie
+d dependency expressed through method 'dataSourceScriptDatabaseInitializer' par
+ameter 0: Error creating bean with name 'dataSource' defined in class path reso
+urce [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikar
+i.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory m
+ethod 'dataSource' threw exception with message: Failed to determine a suitable
+ driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:489)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 47 more
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.format.support.FormattingConversionService]: Fac
+tory method 'mvcConversionService' threw exception with message: Error creating
+ bean with name 'jsonSchemaConverter' defined in class path resource [org/sprin
+gframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Unsat
+isfied dependency expressed through method 'jsonSchemaConverter' parameter 1: E
+rror creating bean with name 'associationLinks' defined in class path resource
+[org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'associationLinks' paramet
+er 0: Error creating bean with name 'resourceMappings' defined in class path re
+source [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigurat
+ion.class]: Failed to instantiate [org.springframework.data.rest.core.mapping.R
+epositoryResourceMappings]: Factory method 'resourceMappings' threw exception w
+ith message: Error creating bean with name 'jdbcMappingContext' defined in clas
+s path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepos
+itoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depend
+ency expressed through method 'jdbcMappingContext' parameter 1: Error creating
+bean with name 'jdbcCustomConversions' defined in class path resource [org/spri
+ngframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$
+SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.
+data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConver
+sions' threw exception with message: Error creating bean with name 'jdbcDialect
+' defined in class path resource [org/springframework/boot/data/jdbc/autoconfig
+ure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: U
+nsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error
+ creating bean with name 'namedParameterJdbcTemplate' defined in class path res
+ource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateCo
+nfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseIn
+itializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': E
+rror creating bean with name 'dataSourceScriptDatabaseInitializer' defined in c
+lass path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceIniti
+alizationAutoConfiguration.class]: Unsatisfied dependency expressed through met
+hod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with
+ name 'dataSource' defined in class path resource [org/springframework/boot/jdb
+c/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [c
+om.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception
+ with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653)
+        ... 61 more
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jsonSchemaConverter' defined in class path resou
+rce [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration
+.class]: Unsatisfied dependency expressed through method 'jsonSchemaConverter'
+parameter 1: Error creating bean with name 'associationLinks' defined in class
+path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcCon
+figuration.class]: Unsatisfied dependency expressed through method 'association
+Links' parameter 0: Error creating bean with name 'resourceMappings' defined in
+ class path resource [org/springframework/data/rest/webmvc/config/RepositoryRes
+tMvcConfiguration.class]: Failed to instantiate [org.springframework.data.rest.
+core.mapping.RepositoryResourceMappings]: Factory method 'resourceMappings' thr
+ew exception with message: Error creating bean with name 'jdbcMappingContext' d
+efined in class path resource [org/springframework/boot/data/jdbc/autoconfigure
+/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsa
+tisfied dependency expressed through method 'jdbcMappingContext' parameter 1: E
+rror creating bean with name 'jdbcCustomConversions' defined in class path reso
+urce [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAuto
+Configuration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.sp
+ringframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jd
+bcCustomConversions' threw exception with message: Error creating bean with nam
+e 'jdbcDialect' defined in class path resource [org/springframework/boot/data/j
+dbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfigura
+tion.class]: Unsatisfied dependency expressed through method 'jdbcDialect' para
+meter 0: Error creating bean with name 'namedParameterJdbcTemplate' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/NamedParameter
+JdbcTemplateConfiguration.class]: Failed to initialize dependency 'dataSourceSc
+riptDatabaseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJd
+bcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer
+' defined in class path resource [org/springframework/boot/jdbc/autoconfigure/D
+ataSourceInitializationAutoConfiguration.class]: Unsatisfied dependency express
+ed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error crea
+ting bean with name 'dataSource' defined in class path resource [org/springfram
+ework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to
+instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' t
+hrew exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfigu
+ration.addFormatters(DelegatingWebMvcConfiguration.java:86)
+        at org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration$Ena
+bleWebMvcConfiguration.mvcConversionService(WebMvcAutoConfiguration.java:570)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155)
+        ... 64 more
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'associationLinks' defined in class path resource
+ [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.cl
+ass]: Unsatisfied dependency expressed through method 'associationLinks' parame
+ter 0: Error creating bean with name 'resourceMappings' defined in class path r
+esource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfigura
+tion.class]: Failed to instantiate [org.springframework.data.rest.core.mapping.
+RepositoryResourceMappings]: Factory method 'resourceMappings' threw exception
+with message: Error creating bean with name 'jdbcMappingContext' defined in cla
+ss path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepo
+sitoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depen
+dency expressed through method 'jdbcMappingContext' parameter 1: Error creating
+ bean with name 'jdbcCustomConversions' defined in class path resource [org/spr
+ingframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration
+$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework
+.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConve
+rsions' threw exception with message: Error creating bean with name 'jdbcDialec
+t' defined in class path resource [org/springframework/boot/data/jdbc/autoconfi
+gure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]:
+Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Erro
+r creating bean with name 'namedParameterJdbcTemplate' defined in class path re
+source [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateC
+onfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseI
+nitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate':
+Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInit
+ializationAutoConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean wit
+h name 'dataSource' defined in class path resource [org/springframework/boot/jd
+bc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [
+com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exceptio
+n with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 85 more
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'resourceMappings' defined in class path resource [org/spr
+ingframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]: Fai
+led to instantiate [org.springframework.data.rest.core.mapping.RepositoryResour
+ceMappings]: Factory method 'resourceMappings' threw exception with message: Er
+ror creating bean with name 'jdbcMappingContext' defined in class path resource
+ [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConf
+iguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed
+through method 'jdbcMappingContext' parameter 1: Error creating bean with name
+'jdbcCustomConversions' defined in class path resource [org/springframework/boo
+t/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcC
+onfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.
+convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw ex
+ception with message: Error creating bean with name 'jdbcDialect' defined in cl
+ass path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRep
+ositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied depe
+ndency expressed through method 'jdbcDialect' parameter 0: Error creating bean
+with name 'namedParameterJdbcTemplate' defined in class path resource [org/spri
+ngframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.cla
+ss]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of N
+amedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating b
+ean with name 'dataSourceScriptDatabaseInitializer' defined in class path resou
+rce [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoCo
+nfiguration.class]: Unsatisfied dependency expressed through method 'dataSource
+ScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSour
+ce' defined in class path resource [org/springframework/boot/jdbc/autoconfigure
+/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikar
+i.HikariDataSource]: Factory method 'dataSource' threw exception with message:
+Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:645)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 99 more
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.data.rest.core.mapping.RepositoryResourceMapping
+s]: Factory method 'resourceMappings' threw exception with message: Error creat
+ing bean with name 'jdbcMappingContext' defined in class path resource [org/spr
+ingframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration
+$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through m
+ethod 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCust
+omConversions' defined in class path resource [org/springframework/boot/data/jd
+bc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfigurat
+ion.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.J
+dbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception w
+ith message: Error creating bean with name 'jdbcDialect' defined in class path
+resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositories
+AutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency ex
+pressed through method 'jdbcDialect' parameter 0: Error creating bean with name
+ 'namedParameterJdbcTemplate' defined in class path resource [org/springframewo
+rk/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.class]: Fail
+ed to initialize dependency 'dataSourceScriptDatabaseInitializer' of NamedParam
+eterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating bean with
+name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/
+springframework/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfigurati
+on.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDat
+abaseInitializer' parameter 0: Error creating bean with name 'dataSource' defin
+ed in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSour
+ceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariD
+ataSource]: Factory method 'dataSource' threw exception with message: Failed to
+ determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653)
+        ... 113 more
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jdbcMappingContext' defined in class path resour
+ce [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoCo
+nfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expresse
+d through method 'jdbcMappingContext' parameter 1: Error creating bean with nam
+e 'jdbcCustomConversions' defined in class path resource [org/springframework/b
+oot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdb
+cConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.cor
+e.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw
+exception with message: Error creating bean with name 'jdbcDialect' defined in
+class path resource [org/springframework/boot/data/jdbc/autoconfigure/DataJdbcR
+epositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied de
+pendency expressed through method 'jdbcDialect' parameter 0: Error creating bea
+n with name 'namedParameterJdbcTemplate' defined in class path resource [org/sp
+ringframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfiguration.c
+lass]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of
+ NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error creating
+ bean with name 'dataSourceScriptDatabaseInitializer' defined in class path res
+ource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializationAuto
+Configuration.class]: Unsatisfied dependency expressed through method 'dataSour
+ceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSo
+urce' defined in class path resource [org/springframework/boot/jdbc/autoconfigu
+re/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hik
+ari.HikariDataSource]: Factory method 'dataSource' threw exception with message
+: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.data.rest.core.mapping.RepositoryResourceMappings.<in
+it>(RepositoryResourceMappings.java:64)
+        at org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
+n.resourceMappings(RepositoryRestMvcConfiguration.java:709)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155)
+        ... 116 more
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'jdbcCustomConversions' defined in class path resource [or
+g/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfigur
+ation$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springfram
+ework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustom
+Conversions' threw exception with message: Error creating bean with name 'jdbcD
+ialect' defined in class path resource [org/springframework/boot/data/jdbc/auto
+configure/DataJdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.cla
+ss]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0:
+ Error creating bean with name 'namedParameterJdbcTemplate' defined in class pa
+th resource [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemp
+lateConfiguration.class]: Failed to initialize dependency 'dataSourceScriptData
+baseInitializer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTempla
+te': Error creating bean with name 'dataSourceScriptDatabaseInitializer' define
+d in class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourc
+eInitializationAutoConfiguration.class]: Unsatisfied dependency expressed throu
+gh method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bea
+n with name 'dataSource' defined in class path resource [org/springframework/bo
+ot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instanti
+ate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exc
+eption with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:489)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1762)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 141 more
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: F
+actory method 'jdbcCustomConversions' threw exception with message: Error creat
+ing bean with name 'jdbcDialect' defined in class path resource [org/springfram
+ework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfiguration$Spring
+BootJdbcConfiguration.class]: Unsatisfied dependency expressed through method '
+jdbcDialect' parameter 0: Error creating bean with name 'namedParameterJdbcTemp
+late' defined in class path resource [org/springframework/boot/jdbc/autoconfigu
+re/NamedParameterJdbcTemplateConfiguration.class]: Failed to initialize depende
+ncy 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOperations bean
+'namedParameterJdbcTemplate': Error creating bean with name 'dataSourceScriptDa
+tabaseInitializer' defined in class path resource [org/springframework/boot/jdb
+c/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Unsatisfied d
+ependency expressed through method 'dataSourceScriptDatabaseInitializer' parame
+ter 0: Error creating bean with name 'dataSource' defined in class path resourc
+e [org/springframework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.c
+lass]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory meth
+od 'dataSource' threw exception with message: Failed to determine a suitable dr
+iver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653)
+        ... 155 more
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'jdbcDialect' defined in class path resource [org
+/springframework/boot/data/jdbc/autoconfigure/DataJdbcRepositoriesAutoConfigura
+tion$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed throu
+gh method 'jdbcDialect' parameter 0: Error creating bean with name 'namedParame
+terJdbcTemplate' defined in class path resource [org/springframework/boot/jdbc/
+autoconfigure/NamedParameterJdbcTemplateConfiguration.class]: Failed to initial
+ize dependency 'dataSourceScriptDatabaseInitializer' of NamedParameterJdbcOpera
+tions bean 'namedParameterJdbcTemplate': Error creating bean with name 'dataSou
+rceScriptDatabaseInitializer' defined in class path resource [org/springframewo
+rk/boot/jdbc/autoconfigure/DataSourceInitializationAutoConfiguration.class]: Un
+satisfied dependency expressed through method 'dataSourceScriptDatabaseInitiali
+zer' parameter 0: Error creating bean with name 'dataSource' defined in class p
+ath resource [org/springframework/boot/jdbc/autoconfigure/DataSourceConfigurati
+on$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: F
+actory method 'dataSource' threw exception with message: Failed to determine a
+suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration
+.jdbcCustomConversions(AbstractJdbcConfiguration.java:153)
+        at org.springframework.boot.data.jdbc.autoconfigure.DataJdbcRepositoriesAuto
+Configuration$SpringBootJdbcConfiguration.jdbcCustomConversions(DataJdbcReposit
+oriesAutoConfiguration.java:126)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:155)
+        ... 158 more
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'namedParameterJdbcTemplate' defined in class path resourc
+e [org/springframework/boot/jdbc/autoconfigure/NamedParameterJdbcTemplateConfig
+uration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitia
+lizer' of NamedParameterJdbcOperations bean 'namedParameterJdbcTemplate': Error
+ creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class
+ path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInitializ
+ationAutoConfiguration.class]: Unsatisfied dependency expressed through method
+'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with nam
+e 'dataSource' defined in class path resource [org/springframework/boot/jdbc/au
+toconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.z
+axxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception wit
+h message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:322)
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Abs
+tractBeanFactory.java:201)
+        at org.springframework.beans.factory.config.DependencyDescriptor.resolveCand
+idate(DependencyDescriptor.java:229)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1762)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 178 more
+> Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in
+class path resource [org/springframework/boot/jdbc/autoconfigure/DataSourceInit
+ializationAutoConfiguration.class]: Unsatisfied dependency expressed through me
+thod 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean wit
+h name 'dataSource' defined in class path resource [org/springframework/boot/jd
+bc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to instantiate [
+com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exceptio
+n with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:804)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:546)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.ge
+tSingleton(DefaultSingletonBeanRegistry.java:371)
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:331)
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Abs
+tractBeanFactory.java:196)
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(A
+bstractBeanFactory.java:309)
+        ... 184 more
+> Caused by: org.springframework.beans.factory.BeanCreationException: Error cre
+ating bean with name 'dataSource' defined in class path resource [org/springfra
+mework/boot/jdbc/autoconfigure/DataSourceConfiguration$Hikari.class]: Failed to
+ instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource'
+threw exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:657)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+UsingFactoryMethod(ConstructorResolver.java:645)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
+ory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.doRe
+solveDependency(DefaultListableBeanFactory.java:1704)
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.reso
+lveDependency(DefaultListableBeanFactory.java:1651)
+        at org.springframework.beans.factory.support.ConstructorResolver.resolveAuto
+wiredArgument(ConstructorResolver.java:912)
+        at org.springframework.beans.factory.support.ConstructorResolver.createArgum
+entArray(ConstructorResolver.java:791)
+        ... 194 more
+> Caused by: org.springframework.beans.BeanInstantiationException: Failed to in
+stantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' thr
+ew exception with message: Failed to determine a suitable driver class
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lam
+bda$instantiate$0(SimpleInstantiationStrategy.java:183)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+        at org.springframework.beans.factory.support.SimpleInstantiationStrategy.ins
+tantiate(SimpleInstantiationStrategy.java:152)
+        at org.springframework.beans.factory.support.ConstructorResolver.instantiate
+(ConstructorResolver.java:653)
+        ... 208 more
+> Caused by: org.springframework.boot.jdbc.autoconfigure.DataSourceProperties$D
+ataSourceBeanCreationException: Failed to determine a suitable driver class
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.determin
+eDriverClassName(DataSourceProperties.java:179)
+        at org.springframework.boot.jdbc.autoconfigure.PropertiesJdbcConnectionDetai
+ls.getDriverClassName(PropertiesJdbcConnectionDetails.java:51)
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration.creat
+eDataSource(DataSourceConfiguration.java:63)
+        at org.springframework.boot.jdbc.autoconfigure.DataSourceConfiguration$Hikar
+i.dataSource(DataSourceConfiguration.java:128)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565)
