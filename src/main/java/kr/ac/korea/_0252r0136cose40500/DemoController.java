@@ -2,6 +2,7 @@ package kr.ac.korea._0252r0136cose40500;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +41,16 @@ public class DemoController {
                 .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"id\": 1, \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
+                .retrieve()
+                .body(String.class);
+    }
+
+    @PatchMapping("/demo/external-patch")
+    public String patchExternalData() {
+        return restClient.patch()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .contentType(MediaType.APPLICATION_JSON)
+                .body("{\"title\": \"foo-patched\"}")
                 .retrieve()
                 .body(String.class);
     }

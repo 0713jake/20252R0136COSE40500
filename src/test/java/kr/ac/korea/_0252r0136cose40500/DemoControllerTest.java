@@ -7,6 +7,7 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -33,6 +34,12 @@ class DemoControllerTest {
     @Test
     void testExternalPut() throws Exception {
         mockMvc.perform(put("/demo/external-put"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testExternalPatch() throws Exception {
+        mockMvc.perform(patch("/demo/external-patch"))
                 .andExpect(status().isOk());
     }
 }
