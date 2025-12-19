@@ -1,5 +1,6 @@
 package kr.ac.korea._0252r0136cose40500;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -69,6 +70,14 @@ public class DemoController {
     @RequestMapping(value = "/demo/external-head", method = RequestMethod.HEAD)
     public void headExternalData() {
         restClient.head()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .retrieve()
+                .toBodilessEntity();
+    }
+
+    @RequestMapping(value = "/demo/external-connect")
+    public void connectExternalData() {
+        restClient.method(HttpMethod.valueOf("TRACE"))
                 .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .retrieve()
                 .toBodilessEntity();

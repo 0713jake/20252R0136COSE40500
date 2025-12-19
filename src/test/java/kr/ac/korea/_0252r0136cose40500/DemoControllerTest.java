@@ -1,5 +1,6 @@
 package kr.ac.korea._0252r0136cose40500;
 
+import org.springframework.http.HttpMethod;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -54,6 +56,12 @@ class DemoControllerTest {
     @Test
     void testExternalHead() throws Exception {
         mockMvc.perform(head("/demo/external-head"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testExternalConnect() throws Exception {
+        mockMvc.perform(get("/demo/external-connect"))
                 .andExpect(status().isOk());
     }
 }
