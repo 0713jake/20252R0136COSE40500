@@ -90,4 +90,12 @@ public class DemoController {
                 .retrieve()
                 .toBodilessEntity();
     }
+
+    @RequestMapping(value = "/demo/external-trace", method = RequestMethod.TRACE)
+    public void traceExternalData() {
+        restClient.method(HttpMethod.TRACE)
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .retrieve()
+                .toBodilessEntity();
+    }
 }
