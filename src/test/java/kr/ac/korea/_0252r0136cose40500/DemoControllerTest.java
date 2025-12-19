@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -40,6 +41,12 @@ class DemoControllerTest {
     @Test
     void testExternalPatch() throws Exception {
         mockMvc.perform(patch("/demo/external-patch"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testExternalDelete() throws Exception {
+        mockMvc.perform(delete("/demo/external-delete"))
                 .andExpect(status().isOk());
     }
 }

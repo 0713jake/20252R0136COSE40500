@@ -1,6 +1,7 @@
 package kr.ac.korea._0252r0136cose40500;
 
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,6 +52,14 @@ public class DemoController {
                 .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("{\"title\": \"foo-patched\"}")
+                .retrieve()
+                .body(String.class);
+    }
+
+    @DeleteMapping("/demo/external-delete")
+    public String deleteExternalData() {
+        return restClient.delete()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .retrieve()
                 .body(String.class);
     }
