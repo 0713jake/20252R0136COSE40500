@@ -7,6 +7,7 @@ import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -19,6 +20,12 @@ class DemoControllerTest {
     @Test
     void testExternalGet() throws Exception {
         mockMvc.perform(get("/demo/external"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testExternalPost() throws Exception {
+        mockMvc.perform(post("/demo/external-post"))
                 .andExpect(status().isOk());
     }
 }
