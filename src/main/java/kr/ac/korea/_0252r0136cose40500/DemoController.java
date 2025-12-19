@@ -77,7 +77,15 @@ public class DemoController {
 
     @RequestMapping(value = "/demo/external-connect")
     public void connectExternalData() {
-        restClient.method(HttpMethod.valueOf("TRACE"))
+        restClient.options()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .retrieve()
+                .toBodilessEntity();
+    }
+
+    @RequestMapping(value = "/demo/external-options", method = RequestMethod.OPTIONS)
+    public void optionsExternalData() {
+        restClient.options()
                 .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .retrieve()
                 .toBodilessEntity();
