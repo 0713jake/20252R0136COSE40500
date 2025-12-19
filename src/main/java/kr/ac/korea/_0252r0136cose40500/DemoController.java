@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
 
@@ -62,5 +64,13 @@ public class DemoController {
                 .uri("https://jsonplaceholder.typicode.com/posts/1")
                 .retrieve()
                 .body(String.class);
+    }
+
+    @RequestMapping(value = "/demo/external-head", method = RequestMethod.HEAD)
+    public void headExternalData() {
+        restClient.head()
+                .uri("https://jsonplaceholder.typicode.com/posts/1")
+                .retrieve()
+                .toBodilessEntity();
     }
 }

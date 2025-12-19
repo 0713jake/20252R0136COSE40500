@@ -8,6 +8,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.head;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
@@ -47,6 +48,12 @@ class DemoControllerTest {
     @Test
     void testExternalDelete() throws Exception {
         mockMvc.perform(delete("/demo/external-delete"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void testExternalHead() throws Exception {
+        mockMvc.perform(head("/demo/external-head"))
                 .andExpect(status().isOk());
     }
 }
